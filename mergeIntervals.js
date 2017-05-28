@@ -17,5 +17,5 @@ const mergeIntervals = (intervals) => {
     return accummulator;
   }, [sorted[0]]);
 };
-const intervals = [ new Interval(3, 7), new Interval(1, 5), new Interval(6, 8), new Interval(7, 10), new Interval(7, 15)];
-console.log(mergeIntervals(intervals));
+// const intervals = [ new Interval(3, 7), new Interval(1, 5), new Interval(6, 8), new Interval(7, 10), new Interval(7, 15)];
+// console.log(mergeIntervals(intervals));
