@@ -32,6 +32,6 @@ const quickSort = function(array, lowIndex, highIndex) {
   }
 
 };
-let unsortedArray = [55, -35, 26, 200, 0, 32, 18, 7, 23, 8, 2, 3];
-quickSort(unsortedArray, 0, unsortedArray.length - 1);
-console.log(unsortedArray);
+// let unsortedArray = [55, -35, 26, 200, 0, 32, 18, 7, 23, 8, 2, 3];
+// quickSort(unsortedArray, 0, unsortedArray.length - 1);
+// console.log(unsortedArray);
