@@ -15,6 +15,8 @@ const lengthOfLIS = ( array ) => {
   return max;
 };
 
+
+
 const myArray = [10, 22, 9, 33, 21, 50, 41, 60];
 
 console.log(lengthOfLIS(myArray));
