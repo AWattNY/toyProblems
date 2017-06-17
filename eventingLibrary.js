@@ -39,4 +39,28 @@ MixEvents.prototype.trigger = function(event, ...args) {
   }
 };
 
+class MixEvents2 {
+  constructor(obj) {
+    this.events = {};
+  }
+  on(event, callback) {
+    this.events[event] = this.events[event] || [];
+    this.events[event].push(callback);  
+  }
+  trigger(event, ...args) {
+    if ( this.events[event] ) {
+      // let args = Array.prototype.slice.call(arguments, 1);
+      this.events[event].forEach(function(callback) {
+        callback.apply(this, args);  
+      });
+    }
+  }
+}
+
+var obj = new MixEvents2({ name: 'Alice', age: 30 });
+obj.on('ageChange', function() { 
+  console.log('Age changed');
+});
+obj.age++;
+console.log(obj.trigger('ageChange')); 
 
