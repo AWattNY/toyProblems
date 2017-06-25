@@ -6,7 +6,7 @@ const lengthOfLIS = ( array ) => {
   let max = 0;
   for ( var i = 0; i < length; i++ ) {
     for ( var j = 0; j < i; j++ ) {
-      if ( array[i] > array [j] ) {
+      if ( array[j] < array [i] ) {
         lis[i] = Math.max( lis[j] + 1, lis[i] );
       }
     }
@@ -18,5 +18,8 @@ const lengthOfLIS = ( array ) => {
  
 
 const myArray = [10, 22, 9, 33, 21, 50, 41, 60];
+
+const myArrayB = [10, 22, 9, 33, 21, 50, 41, 60];
+
 
 console.log(lengthOfLIS(myArray));
