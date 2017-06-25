@@ -8,7 +8,7 @@ const getAllAnagrams = (string) => {
       getAnagrams(anagram + str.charAt(i), str.slice(0, i) + str.slice(i + 1));
     }
   })('', string);
-  return hashMap.keys(); 
+  return Array.from(hashMap.keys()); 
 };
 
 
