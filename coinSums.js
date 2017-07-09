@@ -1,7 +1,7 @@
 
 const makeChange = (total) => {
   var result = 0;
-  var denominations = [1, 2, 5, 10, 20, 50, 100, 200];
+  var denominations = [ 5, 10, 25];
   (function change(index, tot) {
     let currentdenomination = denominations[index];
     if ( index === 0 ) {
@@ -19,7 +19,7 @@ const makeChange = (total) => {
 };
 
 
-
+console.log(makeChange(20));
 
 
 
