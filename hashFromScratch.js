@@ -36,3 +36,44 @@ HashMap.prototype.getRandom = function() {
   return { key, value };
 };
 
+class HashMap2 {
+  constructor() {
+    this.storage = {};
+    this.size = 0;
+  }
+
+
+  put(key, value) {
+    if ( !this.storage[key] ) {
+      this.size++;
+    }
+    this.storage[key] = value;
+    return this;
+  }
+
+  get(key) {
+    return this.storage[key];
+  }
+
+  delete(key) {
+    let returnValue = false;
+    if ( this.storage[key] ) {
+      returnValue = true;
+      this.size--;
+    }
+    delete this.storage[key];
+    return returnValue;
+  }
+
+  has(key) {
+    return this.storage.hasOwnProperty(key);
+  }
+
+  getRandom() {
+    let randomIndex = Math.floor( Math.random() * this.size );
+    let key = Object.keys(this.storage)[randomIndex];
+    let value = this.storage[key];
+    return { key, value };
+  }
+
+}
