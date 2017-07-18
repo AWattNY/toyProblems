@@ -1,37 +1,30 @@
-const partition = function(array, lowIndex, highIndex) {
-  const pivot = array[lowIndex];
-  let leftIndex = lowIndex;
-  let rightIndex = highIndex;
-  let swapped;
-  while (leftIndex <= rightIndex) {
-    while ( array[leftIndex] < pivot ) {
-      leftIndex++;
-    }
-    while ( array[rightIndex] > pivot ) {
-      rightIndex--;
-    }
-    if (leftIndex <= rightIndex) {
-      swapped = array[leftIndex];
-      array[leftIndex] = array[rightIndex];
-      array[rightIndex] = swapped;
-      leftIndex++;
-      rightIndex--;
-    }
-  }
-  return leftIndex;
-
+const swap = (arr, i, j) => {
+  let temp = arr[i];
+  arr[i] = arr[j];
+  arr[j] = temp;
 };
 
-const quickSort = function(array, lowIndex, highIndex) {
-  const index = partition(array, lowIndex, highIndex);
-  if (lowIndex < index - 1) {
-    quickSort(array, lowIndex, index - 1);
+const partition = (arr, lo, hi) => {
+  let pivot = arr[hi];
+  let i = lo;
+  for ( var j = 0; j < hi; j++ ) {
+    if ( arr[j] <= pivot ) {
+      swap(arr, i, j);
+      i++;
+    }
   }
-  if (index < highIndex) {
-    quickSort(array, index, highIndex);
-  }
-
+  swap(arr, i, hi);
+  return i;
 };
-// let unsortedArray = [55, -35, 26, 200, 0, 32, 18, 7, 23, 8, 2, 3];
-// quickSort(unsortedArray, 0, unsortedArray.length - 1);
-// console.log(unsortedArray);
+const quickSort = (arr, lo, hi) => {
+  if (lo < hi) {
+    let partitionIndex = partition(arr, lo, hi);
+    quickSort(arr, lo, partitionIndex - 1);
+    quickSort(arr, partitionIndex + 1, hi);
+  }
+};
+
+
+let A = [55, -35, 26, 200, 0, 32, 18, 7, 23, 8, 2, 3];
+quickSort(A, 0, A.length - 1);
+console.log(A);
