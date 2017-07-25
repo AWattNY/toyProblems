@@ -20,4 +20,6 @@ const balancedParens = (string) => {
   return stack.length === 0;
 };
 
+
+
 console.log(balancedParens('[(]{)}'));
