@@ -16,6 +16,9 @@ class BinaryHeap {
     }
     return popped;
   }
+  size() {
+    return this.storage.length;
+  }
   bubbleUp(n) {
     const score = this.scoreFunction;
     let element = this.storage[n];
@@ -66,3 +69,5 @@ class BinaryHeap {
   }
 }
 
+
+module.exports = BinaryHeap;
