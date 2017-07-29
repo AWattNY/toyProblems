@@ -15,8 +15,8 @@ const sortedMerge = ( arrA, arrB ) => {
   }
 };
 
-// var A = [1, 5, 8, 12];
+var A = [1, 5, 8, 12];
 
-// var B = [3, 7, 10, 22];
-// sortedMerge(A, B);
-// console.log(A);
+var B = [3, 7, 10, 22];
+sortedMerge(A, B);
+console.log(A);
