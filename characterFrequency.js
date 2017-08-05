@@ -30,4 +30,4 @@ const characterFrequency = (string) => {
   return result;
 };
 
-console.log(characterFrequency('mmmaaaiiibbb'));
+console.log(characterFrequency('mmaaaiiibbb'));
