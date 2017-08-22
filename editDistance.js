@@ -44,5 +44,5 @@ const editDist = ( str1, str2, m, n ) => {
                       );
 };
 
-// console.log(editDist('sunday', 'saturday', 6, 8));
+console.log(editDist('sunday', 'saturday', 6, 8));
 
