@@ -7,7 +7,7 @@ const swap = (arr, i, j) => {
 const partition = (arr, lo, hi) => {
   let pivot = arr[hi];
   let i = lo;
-  for ( var j = 0; j < hi; j++ ) {
+  for ( var j = lo; j < hi; j++ ) {
     if ( arr[j] <= pivot ) {
       swap(arr, i, j);
       i++;
