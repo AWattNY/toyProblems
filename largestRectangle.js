@@ -39,5 +39,5 @@ const largestRectangle = (arr) => {
   return maxArea;
 };
 
-console.log(largestRectangle([8979, 4570, 6436, 5083, 7780, 3269, 5400, 7579, 2324, 2116]));
-// console.log(largestRectangle([0, 1, 3, 5, 3, 2, 2]));
+// console.log(largestRectangle([8979, 4570, 6436, 5083, 7780, 3269, 5400, 7579, 2324, 2116]));
+ console.log(largestRectangle([0, 1, 3, 4, 4]));
